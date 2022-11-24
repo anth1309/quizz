@@ -1,143 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marhey&display=swap");
 /* General */
-
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body{
+body {
   background-color: rgb(201, 196, 196);
 }
 
-.container{
+.container {
   width: auto;
   display: flex;
   position: relative;
   justify-content: center;
 }
 
-.page{ 
+.page {
   width: 1300px;
   display: flex;
   flex-direction: column;
 }
 /* Header */
-header{
+header {
   display: flex;
   flex-direction: column;
   background-color: rgb(215, 211, 211);
 }
 
-header h1{
-  font-family: 'Marhey', cursive;
+header h1 {
+  font-family: "Marhey", cursive;
   font-size: 3em;
   display: flex;
   justify-content: center;
 }
 
-.headband{
+.headband {
   display: flex;
   margin-bottom: 10px;
 }
 
-header nav{ 
+header nav {
   width: 70%;
   display: flex;
   justify-content: space-around;
- 
 }
-header nav a{
+header nav a {
   color: black;
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
 }
 
-.buttons{
+.buttons {
   width: 30%;
   display: flex;
   justify-content: center;
 }
 
-button{
+button {
   color: black;
   font-size: 1.5em;
 }
 
 /* Corps général */
-section{
+section {
   background-color: #eee;
-  display: flex; 
-  border :solid black 2px;
+  display: flex;
+  border: solid black 2px;
 }
 
 /* inibition bouton radio plus coloration reponse */
-input[type=radio]:checked  + label span {
-  background-color:red;
+input[type="radio"]:checked + label span {
+  background-color: red;
   border-radius: 50%;
 }
-
-/* input[type=radio]{
+.juste + label span {
+  background-color: green;
+}
+.fausse + label span {
+  background-color: red;
+  text-decoration: line-through;
+}
+input[type="radio"] {
   display: none;
-} */
+}
 
-article>ul{
-  
-  width:80% ;
+article > ul {
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; 
+  justify-content: space-around;
 }
 
-section, footer, header{
+section,
+footer,
+header {
   margin: 10px;
 }
 
-legend{
+legend {
   width: 100%;
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
   display: flex;
   justify-content: space-around;
   text-align: center;
- 
 }
 
-article legend{
+article legend {
   width: 100%;
   display: flex;
 }
 
-article{
-  width:80% ;
+article {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-aside{
+aside {
   width: 20%;
 }
 
-.img{
+.img {
   width: 100%;
   padding: 7px;
-  border-radius:40%;
+  border-radius: 40%;
   display: flex;
 }
 
-#dix{
-  display: flex; 
+#dix {
+  display: flex;
 }
 
-.img10{
+.img10 {
   width: 50%;
   border-top-left-radius: 40%;
   border-bottom-left-radius: 40%;
@@ -146,7 +152,7 @@ aside{
   padding-bottom: 7px;
 }
 
-.img10b{
+.img10b {
   width: 50%;
   height: 255.19px;
   border-top-right-radius: 40%;
@@ -156,44 +162,44 @@ aside{
   padding-bottom: 7px;
 }
 
-.validation{
+.validation {
   display: flex;
   width: 20%;
 }
 
 /* Footer */
-footer{
+footer {
   display: flex;
   background-color: rgb(215, 211, 211);
 }
 
-footer>h1{
+footer > h1 {
   width: 30%;
   display: flex;
   justify-content: center;
 }
 
-footer nav{
+footer nav {
   width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-footer nav ul{
+footer nav ul {
   width: 100%;
   display: flex;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
 }
 
-footer nav a{
+footer nav a {
   color: black;
   font-size: 1.7em;
   text-decoration: none;
 }
 
 /* footer mention legale */
-#mentionLegal{
+#mentionLegal {
   display: flex;
   position: fixed;
   top: 0;
@@ -206,14 +212,12 @@ footer nav a{
 
 .openMentions #mentionLegal {
   visibility: visible;
-  opacity:2;
-  transition-delay:2s;
+  opacity: 2;
+  transition-delay: 2s;
 }
 
-
-
 /* footer contact */
-#contact{
+#contact {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -226,12 +230,12 @@ footer nav a{
   visibility: hidden;
 }
 
-.openContact #contact{
+.openContact #contact {
   visibility: visible;
-  opacity:2;
+  opacity: 2;
 }
 
-#closedContact{
+#closedContact {
   color: black;
   display: flex;
   position: fixed;
@@ -243,69 +247,75 @@ footer nav a{
 form div {
   width: 100%;
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
   margin-top: 25px;
-  }
+}
 
-  form div > label {
-    margin-bottom: 7px;
-    }
-    
-    form div > input, form div > select, form div > textarea ,#contact p{
-    background: rgb(92, 91, 91);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
-    }
-    
-    form div > input, form div > select,p {
-    height: 50px;
-    padding-left: 10px;
-    }
-    
-    form div > select {
-    appearance: none; 
-    /* background-position: right 200px top 50%;   */
-    }
-    
-    form div > textarea {
-    height: 195px;
-    padding: 15px 0px 0px 10px;
-    }
-    
-    form div > input::placeholder, form div > textarea::placeholder ,p{
-    color: white;
-    }
-    /* ******************************************************** */
-    form div > select:invalid {
-    color: white;
-    }
-    /* 666666666666666666666666666666666666666666666666666666 */
-    form div > select option {
-    background: white;
-    color: #303030;
-    }
-    
-    form div:last-child {
-    align-items:center;
-    margin-top: 20px;
-    }
-    
-    form button {
-    width: 450px;
-    max-width: 500px;
-    height: 60px;
-    font-weight: 700;
-    font-size: 28px;
-    background: white;
-    border: rgba(48, 48, 48, 0.5) solid 1px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    color: #303030;
-    }
+form div > label {
+  margin-bottom: 7px;
+}
 
+form div > input,
+form div > select,
+form div > textarea,
+#contact p {
+  background: rgb(92, 91, 91);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+form div > input,
+form div > select,
+p {
+  height: 50px;
+  padding-left: 10px;
+}
+
+form div > select {
+  appearance: none;
+  /* background-position: right 200px top 50%;   */
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+}
+
+form div > input::placeholder,
+form div > textarea::placeholder,
+p {
+  color: white;
+}
+/* ******************************************************** */
+form div > select:invalid {
+  color: white;
+}
+/* 666666666666666666666666666666666666666666666666666666 */
+form div > select option {
+  background: white;
+  color: #303030;
+}
+
+form div:last-child {
+  align-items: center;
+  margin-top: 20px;
+}
+
+form button {
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  background: white;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #303030;
+}
 
 /* @media screen and (max-width: 900px) {
   .gauche{
