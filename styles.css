@@ -161,12 +161,10 @@ aside {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-
-.validation {
-  display: flex;
-  width: 20%;
-}
-
+/* #resultatNote {
+  position: fixed;
+  top: 10%;
+} */
 /* Footer */
 footer {
   display: flex;
