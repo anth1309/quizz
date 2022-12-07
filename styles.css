@@ -81,13 +81,41 @@ input[type="radio"]:checked + label span {
   background-color: red;
   border-radius: 50%;
 }
-.juste + label span {
+
+/* coloration reponse juste plus juste */
+.juste + label::after {
+  font-size: 1.5em;
+  color: green;
+  word-spacing: 4em;
+  content: " JUSTE";
+  background-color: #eee;
+}
+.juste + label {
   background-color: green;
 }
-.fausse + label span {
+
+/* coloration reponse fausse plus faux */
+.fausse + label {
   background-color: red;
   text-decoration: line-through;
 }
+.fausse + label:after {
+  font-size: 1.5em;
+  color: red;
+  word-spacing: 4em;
+  content: " FAUX";
+  background-color: #eee;
+}
+
+/* activation correction */
+.correction {
+  visibility: hidden;
+}
+
+.visibleCorrection .correction {
+  visibility: visible;
+}
+/* css global */
 input[type="radio"] {
   display: none;
 }
@@ -161,11 +189,7 @@ aside {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-/* #resultatNote {
-  position: fixed;
-  top: 10%;
-} */
-/* Footer */
+
 footer {
   display: flex;
   background-color: rgb(215, 211, 211);
@@ -198,6 +222,7 @@ footer nav a {
 
 /* footer mention legale */
 #mentionLegal {
+  color: black;
   display: flex;
   position: fixed;
   top: 0;
@@ -210,10 +235,26 @@ footer nav a {
 
 .openMentions #mentionLegal {
   visibility: visible;
-  opacity: 2;
+  /* opacity: 3; */
   transition-delay: 2s;
 }
+#mentionLegal {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  /* top: 200px; */
+}
+#mentionLegal p {
+  display: flex;
 
+  text-indent: 2em;
+}
+#closed {
+  color: black;
+  display: flex;
+  text-decoration: none;
+}
 /* footer contact */
 #contact {
   display: flex;
@@ -278,13 +319,13 @@ form div > select {
 }
 
 form div > textarea {
-  height: 195px;
+  height: 105px;
   padding: 15px 0px 0px 10px;
 }
 
-form div > input::placeholder,
-form div > textarea::placeholder,
-p {
+form input::placeholder,
+form textarea::placeholder,
+form > p {
   color: white;
 }
 /* ******************************************************** */
